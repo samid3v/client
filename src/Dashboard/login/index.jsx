@@ -45,7 +45,7 @@ const Login = () => {
                        
                        if (response.status===200) {
                          console.log(response.data)
-                         await new Promise((resolve) => setTimeout(resolve, 1000));
+                         // await new Promise((resolve) => setTimeout(resolve, 1000));
 
                          setUser(response.data.user)
                          // setToken(response.data.doc.token)
