@@ -45,11 +45,12 @@ const Login = () => {
                        
                        if (response.status===200) {
                          console.log(response.data)
-                         // setUser(response.data.user)
+                         await new Promise((resolve) => setTimeout(resolve, 1000));
+
+                         setUser(response.data.user)
                          // setToken(response.data.doc.token)
                          encryptData(response.data.user, 'user')
                          // encryptData(response.data.doc.token, 'token')
-                         await new Promise((resolve) => setTimeout(resolve, 0));
                          
                          setFormData({
                               username:'',
