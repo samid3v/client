@@ -29,7 +29,7 @@ function App() {
   
   return (
     <AppProvider>
-      <BrowserRouter>
+      <BrowserRouter basename="/">
         <Routes>
           <Route path='/' element={<Login/>}/>
           <Route  path='dashboard' element={<Dashboard/>}>
