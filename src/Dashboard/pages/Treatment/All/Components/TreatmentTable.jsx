@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import { useApp } from '../../../../hooks/useApp';
 import LargeDevice from './TableComponent/LargeDevice';
 import BasicModal from '../../../../components/Modal';
-import { useTreatment } from '../../Hooks';
 import AddTreatment from './AddTreatment';
 import { IoFilter } from "react-icons/io5";
 import Search from './Search';
