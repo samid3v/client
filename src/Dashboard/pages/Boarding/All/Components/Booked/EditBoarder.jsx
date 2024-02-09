@@ -5,7 +5,6 @@ import api from '../../../../../helpers/axiosInstance'
 import { toast } from 'react-toastify'
 import boardingUrl from '../../../../../urls/boarding'
 import moment from "moment-timezone";
-import {DateTime} from 'luxon'
 
 const EditBoarder = ({handleClose}) => {
      const { setShowLoader  } = useApp()
@@ -23,8 +22,6 @@ const EditBoarder = ({handleClose}) => {
      useEffect(() => {
     if (currentBoarder && Object.keys(currentBoarder).length > 0) {
 
-      const startDateTime = DateTime.fromISO(currentBoarder?.module_id?.start_date || '---', { zone: 'Africa/Nairobi' }).toJSDate();
-      const endDateTime = DateTime.fromISO(currentBoarder?.module_id?.end_date || '---', { zone: 'Africa/Nairobi' }).toJSDate();
       
       setFormData({
         patient_id: currentBoarder?.module_id?.patient_id || '---',
