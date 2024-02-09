@@ -2,7 +2,6 @@ import React, { useEffect } from 'react';
 import { useApp } from '../../../../hooks/useApp';
 import { usePatients } from '../../Hooks/usePatients';
 import { GiCancel } from "react-icons/gi";
-import Loader from '../../../../components/Loader';
 
 const ViewPatient = ({handleClose}) => {
 

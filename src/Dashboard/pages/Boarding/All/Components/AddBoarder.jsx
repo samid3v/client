@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import Modal from '../../../../components/Modal';
 import { useApp } from '../../../../hooks/useApp';
 import { useBoarding } from '../../Hooks';
 import { toast } from 'react-toastify';
