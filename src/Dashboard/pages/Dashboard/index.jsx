@@ -5,7 +5,8 @@ import DashProvider from './Provider'
 const Dash = () => {
   return (
     <DashProvider >
-      <Stats />
+      {/* <Stats /> */}
+      <div>yyyyyyy</div>
     </DashProvider>
   )
 }

@@ -11,12 +11,12 @@ const Login = () => {
      const navigate = useNavigate()
      const { setShowLoader,setToken, setUser } = useApp();
 
-//   const decryptUser = decryptData('user');
-//   console.log(decryptUser)
-//   if (decryptUser) {
-//      setUser(decryptUser)
-//      navigate('/dashboard')
-//   }
+     const decryptUser = decryptData('user');
+     console.log(decryptUser)
+     if (decryptUser) {
+          setUser(decryptUser)
+          navigate('/dashboard')
+     }
 
      
      const [formData, setFormData] = useState({
@@ -55,7 +55,7 @@ const Login = () => {
                          console.log(response.data)
                          setUser(response.data.user)
                          // setToken(response.data.doc.token)
-                         // encryptData(response.data.user, 'user')
+                         encryptData(response.data.user, 'user')
                          // encryptData(response.data.doc.token, 'token')
                          
                          setFormData({
