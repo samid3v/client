@@ -12,7 +12,7 @@ const Login = () => {
      const { setShowLoader,setToken, setUser } = useApp();
 
   const decryptUser = decryptData('user');
-
+  console.log(decryptUser)
   if (decryptUser) {
      setUser(decryptUser)
      navigate('/dashboard')
