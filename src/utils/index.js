@@ -1,7 +1,7 @@
 import CryptoJS from 'crypto-js'
 
 function encryptData(data, key) {
-     localStorage.setItem('yooooo');
+     localStorage.setItem('yooooo','yesss');
      console.log('encrypting.....');
      const jsonData = JSON.stringify(data);
    
