@@ -1,12 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import Modal from '../../../../../components/Modal';
 import { useApp } from '../../../../../hooks/useApp';
 import { useVaccine } from '../../../Hooks';
 import { toast } from 'react-toastify';
 import api from '../../../../../helpers/axiosInstance';
-import boardingUrl from '../../../../../urls/boarding';
-import random from '../../../../../urls/random';
-import treatmentUrl from '../../../../../urls/treatment';
 import vaccineUrl from '../../../../../urls/vaccine';
 
 const AddVaccine = ({handleClose}) => {

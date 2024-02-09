@@ -1,11 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import Modal from '../../../../components/Modal';
 import { useApp } from '../../../../hooks/useApp';
 import { useUsers } from '../../Hooks';
 import { toast } from 'react-toastify';
 import api from '../../../../helpers/axiosInstance';
-import LocationData from '../../../../urls/data/LocationData';
-import customersUrl from '../../../../urls/customers';
 import usersUrl from '../../../../urls/user';
 
 const AddUser = ({handleClose}) => {

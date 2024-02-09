@@ -1,17 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import { useApp } from '../../../../../hooks/useApp'
 import { useVaccine } from '../../../Hooks'
-import patientUrl from '../../../../../urls/patients'
 import api from '../../../../../helpers/axiosInstance'
-import { GiCancel } from 'react-icons/gi'
 import { toast } from 'react-toastify'
-import Loader from '../../../../../components/Loader'
-import LocationData from '../../../../../urls/data/LocationData'
-import customersUrl from '../../../../../urls/customers'
-import boardingUrl from '../../../../../urls/boarding'
-import moment from "moment-timezone";
-import {DateTime} from 'luxon'
-import treatmentUrl from '../../../../../urls/treatment'
 import vaccineUrl from '../../../../../urls/vaccine'
 
 const EditVaccine = ({handleClose}) => {

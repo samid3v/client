@@ -8,7 +8,6 @@ import { toast } from 'react-toastify';
 import { useVaccine } from '../../../../Hooks';
 import BasicModal from '../../../../../../components/Modal';
 import { useNavigate } from 'react-router-dom';
-import treatmentUrl from '../../../../../../urls/treatment';
 import EditVaccine from '../EditVaccine';
 import vaccineUrl from '../../../../../../urls/vaccine';
 

@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import Modal from '../../../../components/Modal';
 import { useApp } from '../../../../hooks/useApp';
 import { usePatients } from '../../Hooks/usePatients';
 import { toast } from 'react-toastify';

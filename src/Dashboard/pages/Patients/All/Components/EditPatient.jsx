@@ -3,9 +3,7 @@ import { useApp } from '../../../../hooks/useApp'
 import { usePatients } from '../../Hooks/usePatients'
 import patientUrl from '../../../../urls/patients'
 import api from '../../../../helpers/axiosInstance'
-import { GiCancel } from 'react-icons/gi'
 import { toast } from 'react-toastify'
-import Loader from '../../../../components/Loader'
 
 const EditPatient = ({handleClose}) => {
      const { setModalOpen  } = useApp()
