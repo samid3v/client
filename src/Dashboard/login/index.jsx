@@ -3,19 +3,27 @@ import { toast } from 'react-toastify';
 import api from '../helpers/axiosInstance';
 import loginUrls from '../urls/login';
 import { useApp } from '../hooks/useApp';
-import { encryptData } from '../../utils';
+import { decryptData, encryptData } from '../../utils';
 import { useNavigate } from 'react-router-dom';
 
 const Login = () => {
 
      const navigate = useNavigate()
+     const { setShowLoader,setToken, setUser } = useApp();
+
+  const decryptUser = decryptData('user');
+
+  if (decryptUser) {
+     setUser(decryptUser)
+     navigate('/dashboard')
+  }
+
      
      const [formData, setFormData] = useState({
           username:'',
           password:'',
      })
 
-     const { setShowLoader,setToken, setUser } = useApp();
 
 
      const handleInputChange = (e) => {
