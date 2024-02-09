@@ -18,7 +18,6 @@ import usersUrl from '../../../../../urls/user';
 const Actions = ({doc}) => {
 
   const [openDelete, setOpenDelete] = useState(false)
-  const {user} = useApp()
   const {refreshUsers, setCurrentId, setCurrentUser, searchTerm, currentPage, updateSearchResults} = useUsers()
 
   const [open, setOpen] = useState(false);
@@ -72,16 +71,14 @@ const Actions = ({doc}) => {
   }
 
   return (
-    <>
-      {(user?.user?.role==='admin' || user?.user?.role==='superadmin') && (<div className='flex justify-center items-center gap-3'>
-        <IoLockClosed className='font-semibold text-gray-400 text-lg cursor-pointer'/>
-        <FaRegEdit onClick={handleOpenEdit} className='text-primary font-semibold text-lg cursor-pointer' />
-        <BsTrash onClick={()=>setOpenDelete(true)} className='text-error font-semibold text-lg cursor-pointer' />
-        <DeleteModal open={openDelete} handleClose={()=>setOpenDelete(false)} deleteFunc={deleteDoc} />
-        <BasicModal open={openEditModal} element={<EditOwner handleClose={handleCloseEditModa}/>}/>
-      
-      </div>)}
-    </>
+    <div className='flex justify-center items-center gap-3'>
+      <IoLockClosed className='font-semibold text-gray-400 text-lg cursor-pointer'/>
+     <FaRegEdit onClick={handleOpenEdit} className='text-primary font-semibold text-lg cursor-pointer' />
+     <BsTrash onClick={()=>setOpenDelete(true)} className='text-error font-semibold text-lg cursor-pointer' />
+     <DeleteModal open={openDelete} handleClose={()=>setOpenDelete(false)} deleteFunc={deleteDoc} />
+     <BasicModal open={openEditModal} element={<EditOwner handleClose={handleCloseEditModa}/>}/>
+    
+    </div>
   )
 }
 
